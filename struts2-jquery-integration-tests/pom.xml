@@ -4,7 +4,7 @@
 	<parent>
 		<groupId>com.jgeppert.struts2.jquery</groupId>
 		<artifactId>struts2-jquery</artifactId>
-		<version>5.0.5-SNAPSHOT</version>
+		<version>6.0.0-SNAPSHOT</version>
 	</parent>
 	<artifactId>struts2-jquery-integration-tests</artifactId>
 	<name>Struts 2 jQuery Integration Tests</name>
@@ -30,7 +30,7 @@
 		<commons-codec.version>1.17.0</commons-codec.version>
 		<commons-io.version>2.16.1</commons-io.version>
 		<xml-apis.version>2.0.2</xml-apis.version>
-		<javax.servlet-api.version>3.1.0</javax.servlet-api.version>
+		<jakarta.servlet-api.version>3.1.0</jakarta.servlet-api.version>
 		<jakarta.servlet-api.version>6.1.0</jakarta.servlet-api.version>
 
 		<failsafe.test.tag>HTMLUnit</failsafe.test.tag>
@@ -164,8 +164,8 @@
 			<artifactId>lombok</artifactId>
 		</dependency>
 		<dependency>
-			<groupId>javax.servlet</groupId>
-			<artifactId>javax.servlet-api</artifactId>
+			<groupId>jakarta.servlet</groupId>
+			<artifactId>jakarta.servlet-api</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>jakarta.servlet</groupId>
@@ -276,9 +276,9 @@
 			</dependency>
 
 			<dependency>
-				<groupId>javax.servlet</groupId>
-				<artifactId>javax.servlet-api</artifactId>
-				<version>${javax.servlet-api.version}</version>
+				<groupId>jakarta.servlet</groupId>
+				<artifactId>jakarta.servlet-api</artifactId>
+				<version>${jakarta.servlet-api.version}</version>
 				<scope>provided</scope>
 			</dependency>
 			<dependency>

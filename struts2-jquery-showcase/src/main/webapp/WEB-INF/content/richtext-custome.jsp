@@ -8,7 +8,7 @@
 	Also it loads the initial content via an AJAX request and the editor local is that to french.
 </p>
 <s:url var="remoteurl" action="ajax1"/>
-<s:set var="contextPath" value="#request.get('javax.servlet.forward.context_path')"/>
+<s:set var="contextPath" value="#request.get('jakarta.servlet.forward.context_path')"/>
 <s:form id="formRichtextCustom" action="simpleecho" theme="xhtml">
 	<s:hidden name="escape" value="false"/>
 	<sjr:ckeditor
@@ -51,7 +51,7 @@
 &lt;%@ taglib prefix=&quot;sjr&quot; uri=&quot;/struts-jquery-richtext-tags&quot;%&gt;
 
 &lt;s:url id=&quot;remoteurl&quot; action=&quot;ajax1&quot;/&gt;
-&lt;s:set id=&quot;contextPath&quot;  value=&quot;#request.get('javax.servlet.forward.context_path')&quot; /&gt;
+&lt;s:set id=&quot;contextPath&quot;  value=&quot;#request.get('jakarta.servlet.forward.context_path')&quot; /&gt;
 &lt;s:form id=&quot;formRichtextCustom&quot; action=&quot;simpleecho&quot; theme=&quot;xhtml&quot;&gt;
 	&lt;s:hidden name=&quot;escape&quot; value=&quot;false&quot;/&gt;
 	&lt;sjr:ckeditor

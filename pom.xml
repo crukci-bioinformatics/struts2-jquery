@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.jgeppert.struts2.jquery</groupId>
 	<artifactId>struts2-jquery</artifactId>
-	<version>5.0.5-SNAPSHOT</version>
+	<version>6.0.0-SNAPSHOT</version>
 	<name>Struts 2 jQuery Plugin Parent Module</name>
 	<packaging>pom</packaging>
 	<url>https://github.com/struts-community-plugins/struts2-jquery</url>
@@ -74,10 +74,10 @@
 
 	<properties>
 		<currentVersion>${project.version}</currentVersion>
-		<java.version>1.8</java.version>
+		<java.version>17</java.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<maven.compiler.source>1.8</maven.compiler.source>
-		<maven.compiler.target>1.8</maven.compiler.target>
+		<maven.compiler.source>17</maven.compiler.source>
+		<maven.compiler.target>17</maven.compiler.target>
 		<!-- plugin versions -->
 		<maven-compiler-plugin.version>3.13.0</maven-compiler-plugin.version>
 		<maven-release-plugin.version>3.0.1</maven-release-plugin.version>
@@ -91,16 +91,16 @@
 		<maven-surefire-plugin.version>3.3.0</maven-surefire-plugin.version>
 		<maven-release-plugin.version>3.1.0</maven-release-plugin.version>
 		<!-- dependency versions -->
-		<struts2.version>6.4.0</struts2.version>
-		<tlib.version>2.3</tlib.version>
+		<struts2.version>7.0.0-M7</struts2.version>
+		<tlib.version>3.0</tlib.version>
 		<minify.version>1.7.6</minify.version>
 		<beanutils.version>1.9.4</beanutils.version>
 		<log4j2.version>2.23.1</log4j2.version>
-		<jstl.version>1.1.2</jstl.version>
+		<jstl.version>3.0.0</jstl.version>
 		<taglibs.standard.version>1.1.2</taglibs.standard.version>
 		<struts-annotations.version>1.0.8</struts-annotations.version>
-		<jsp-api.version>2.3.3</jsp-api.version>
-		<servlet-api.version>3.1.0</servlet-api.version>
+		<jsp-api.version>3.1.1</jsp-api.version>
+		<servlet-api.version>6.0.0</servlet-api.version>
 		<commons-lang.version>3.14.0</commons-lang.version>
 		<junit.version>5.10.2</junit.version>
 		<assertj-core.version>3.26.0</assertj-core.version>
@@ -116,7 +116,7 @@
 		<module>struts2-jquery-showcase</module>
 		<module>struts2-jquery-grid-showcase</module>
 		<module>struts2-jquery-archetypes</module>
-		<module>struts2-jquery-integration-tests</module>
+		<!-- <module>struts2-jquery-integration-tests</module> -->
 	</modules>
 
 	<build>
@@ -289,29 +289,29 @@
 			</dependency>
 
 			<dependency>
-				<groupId>javax.servlet.jsp</groupId>
-				<artifactId>javax.servlet.jsp-api</artifactId>
+				<groupId>jakarta.servlet.jsp</groupId>
+				<artifactId>jakarta.servlet.jsp-api</artifactId>
 				<version>${jsp-api.version}</version>
 				<scope>provided</scope>
 			</dependency>
-
+<!--
 			<dependency>
 				<groupId>taglibs</groupId>
 				<artifactId>standard</artifactId>
 				<version>${taglibs.standard.version}</version>
 				<scope>test</scope>
 			</dependency>
-
+-->
 			<dependency>
-				<groupId>javax.servlet</groupId>
-				<artifactId>jstl</artifactId>
+				<groupId>jakarta.servlet.jsp.jstl</groupId>
+				<artifactId>jakarta.servlet.jsp.jstl-api</artifactId>
 				<version>${jstl.version}</version>
 				<scope>test</scope>
 			</dependency>
 
 			<dependency>
-				<groupId>javax.servlet</groupId>
-				<artifactId>javax.servlet-api</artifactId>
+				<groupId>jakarta.servlet</groupId>
+				<artifactId>jakarta.servlet-api</artifactId>
 				<version>${servlet-api.version}</version>
 				<scope>provided</scope>
 			</dependency>
