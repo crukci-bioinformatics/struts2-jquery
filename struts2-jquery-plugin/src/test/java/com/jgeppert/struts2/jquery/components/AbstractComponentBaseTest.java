@@ -1,11 +1,14 @@
 package com.jgeppert.struts2.jquery.components;
 
+import java.beans.BeanInfo;
+
 import com.opensymphony.xwork2.DefaultTextProvider;
 import com.opensymphony.xwork2.conversion.impl.XWorkConverter;
 import com.opensymphony.xwork2.ognl.DefaultOgnlBeanInfoCacheFactory;
 import com.opensymphony.xwork2.ognl.DefaultOgnlExpressionCacheFactory;
 import com.opensymphony.xwork2.ognl.OgnlUtil;
 import com.opensymphony.xwork2.ognl.OgnlValueStack;
+import com.opensymphony.xwork2.ognl.SecurityMemberAccess;
 import com.opensymphony.xwork2.ognl.accessor.CompoundRootAccessor;
 import com.opensymphony.xwork2.util.ValueStack;
 import org.apache.struts2.conversion.StrutsTypeConverterHolder;
@@ -33,9 +36,11 @@ public abstract class AbstractComponentBaseTest {
         private static final long serialVersionUID = 1L;
 
         protected TestOgnlValueStack() {
-            super(converter, new CompoundRootAccessor(), new DefaultTextProvider(), false);
+            super(converter, new CompoundRootAccessor(), new DefaultTextProvider(), new SecurityMemberAccess(false));
 
-            setOgnlUtil(new OgnlUtil(new DefaultOgnlExpressionCacheFactory<>(), new DefaultOgnlBeanInfoCacheFactory<>(), new StrutsOgnlGuard()));
+            setOgnlUtil(new OgnlUtil(new DefaultOgnlExpressionCacheFactory<String, Object>("16", "BASIC"),
+                                     new DefaultOgnlBeanInfoCacheFactory<Class<?>, BeanInfo>("16", "BASIC"),
+                                     new StrutsOgnlGuard()));
         }
 
     }
