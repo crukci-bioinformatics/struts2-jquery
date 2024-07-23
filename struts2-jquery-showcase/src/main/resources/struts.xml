@@ -34,6 +34,7 @@
               value="json-default"/>
     <constant name="struts.custom.i18n.resources" value="messages"/>
 
+    <constant name="struts.allowlist.enable" value="false"/>
 
     <!-- Settings for CKEditor Image Upload -->
     <constant name="struts.ckeditor.allowUploads" value="true"/> <!-- default is false -->
