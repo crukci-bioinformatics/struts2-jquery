@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.jgeppert.struts2.jquery</groupId>
 	<artifactId>struts2-jquery</artifactId>
-	<version>6.0.1-SNAPSHOT</version>
+	<version>6.0.1</version>
 	<name>Struts 2 jQuery Plugin Parent Module</name>
 	<packaging>pom</packaging>
 	<url>https://github.com/struts-community-plugins/struts2-jquery</url>
@@ -62,12 +62,12 @@
 		<repository>
 			<id>struts2-jquery.staging</id>
 			<name>Struts 2 jQuery Plugin Staging Repository</name>
-			<url>https://oss.sonatype.org/service/local/staging/deploy/maven2</url>
+			<url>scpexe://internal-bioinformatics.cruk.cam.ac.uk/var/www/html/maven</url>
 		</repository>
 		<snapshotRepository>
 			<id>struts2-jquery.snapshots</id>
 			<name>Struts 2 jQuery Plugin Snapshots and Test Builds Repository</name>
-			<url>https://oss.sonatype.org/content/repositories/snapshots</url>
+			<url>scpexe://internal-bioinformatics.cruk.cam.ac.uk/var/www/html/maven</url>
 			<uniqueVersion>false</uniqueVersion>
 		</snapshotRepository>
 	</distributionManagement>
@@ -121,6 +121,19 @@
 
 	<build>
 		<defaultGoal>install</defaultGoal>
+
+		<extensions>
+			<extension>
+				<groupId>org.apache.maven.wagon</groupId>
+				<artifactId>wagon-ssh</artifactId>
+				<version>2.12</version>
+			</extension>
+			<extension>
+				<groupId>org.apache.maven.wagon</groupId>
+				<artifactId>wagon-ssh-external</artifactId>
+				<version>2.12</version>
+			</extension>
+		</extensions>
 
 		<plugins>
 			<plugin>
